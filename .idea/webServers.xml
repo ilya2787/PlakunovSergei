@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="50bcf21b-b9be-4af6-ad26-aeb76429562e" name="PlakunovS" url="http://test.plakunovsergey.ru">
+        <fileTransfer rootFolder="/home/users/j/j83977877" accessType="SFTP" host="test.plakunovsergey.ru" port="22" sshConfigId="baf3666c-77e0-4ad9-9da2-ed3232da1489" sshConfig="j83977877@test.plakunovsergey.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="e006d9c3-9fbb-496d-84a3-d915f2bd6e8a" name="OsnovaPlakunoS" url="http://plakunovsergey.ru">
+        <fileTransfer rootFolder="/home/users/j/j83977877" accessType="SFTP" host="plakunovsergey.ru" port="22" sshConfigId="365542ba-3cc3-47b0-bd16-61a6fb06dad8" sshConfig="j83977877@plakunovsergey.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

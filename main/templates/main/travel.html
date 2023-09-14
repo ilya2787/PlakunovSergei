@@ -1,0 +1,364 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Путешествия
+{% endblock %}
+
+{% block content %}
+    <!— Yandex.Metrika counter —>
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(93642517, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!— /Yandex.Metrika counter —>
+
+
+
+    {% include "main/elements/Menu.html" %}
+
+    <div class="content_travel">
+        <!--Первый блок начало страница-->
+        <div class="content_header_travel">
+            <h1>ЭКСТРИМ<BR>ПУТЕШЕСТВИЕ</h1>
+            <h3>Между мирами...</h3>
+            <p>По дороге древних кочевников в "Сердце Азии"<br>вместе с тувинским шаманом</p>
+            <a href="#feedback">
+                <button>Поехали...</button>
+            </a>
+        </div>
+        <!--Блок протяженности путешествия-->
+        <div class="length">
+            <div class="length_content">
+                <div class="left_blok">
+
+                    <div class="info">
+
+                        <h3>Протяженность</h3>
+                        <p>нашего "экстрима" <br>будет от <br>
+                            <fonts style="color:#ff6300; font-size: 30px;"> 3000</fonts>
+                            километров<br> и....
+                        </p>
+                        <div class="day">
+                            <p>8 дней <br> <img src="{% static "main/img/travel/sun.png" %}" alt=""></p>
+                            <p><img src="{% static "main/img/travel/moon.png" %}" alt=""><br>7 ночей</p>
+                        </div>
+                    </div>
+                    <span class="fon_info"></span>
+                </div>
+
+                <div class="right_blok revealator-slideleft revealator-delay1 revealator-once">
+                    <span class="fon_foto"></span>
+                    <div class="foto">
+                        <img src="{% static "main/img/travel/clock.png" %}" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--Блок календарь-->
+        <div class="travel_data">
+            <div class="data_blok">
+                <div class="title_data">
+                    <h3>Даты поездки</h3>
+                </div>
+                <div class="calendar">
+                    <div class="caldata"><p>С</p>
+                        <h3>11.07.2023</h3></div>
+                    <div class="caldata" id="caldata2"><p>по</p>
+                        <h3> 18.07.2023</h3></div>
+                </div>
+            </div>
+
+        </div>
+        <!--Блок Приветствия-->
+        <div class="invite">
+            <div class="left_bloc">
+                <span class="invite_fon_foto"></span>
+                <div class="invite_foto">
+                    <img src="{% static "main/img/travel/invite.jpg" %}" alt="">
+                </div>
+            </div>
+            <div class="right_bloc">
+                <p>Приглашаю вас на неповторимое путешествие.<br>Это будет погружение в верования и быт наших предков.
+                </p>
+            </div>
+
+        </div>
+        <!--Блок духовные цели путешествия-->
+        <div class="purposes_travel">
+            <div class="title_purposes">
+                <span class="fon_p_title"></span>
+                <h2>Вот некоторые духовные<br>цели нашего путешествия</h2>
+            </div>
+            <div class="content_puproses">
+                <div class="left_puproses">
+                    <p>Прикосновение к кочевой жизни наших предков.<br><br>
+                        Найти ответы на глубинные вопросы связанные с нашими жизненными ситуациями.<br><br>
+                        "подсветить жизненный маршрут" - сложить свою, собственную дорогу жизни.<br><br>
+                        Получить духовную энергию, но не для сиюминутной выгоды, а для
+                        решения тяжелого жизненного положения, если оно будет в будущем.</p>
+                </div>
+                <div class="right_puproses">
+                    <div class="grup">
+                        <p><i class="fa-solid fa-people-line"></i><br>Группа до <font style="color:#ffb777;">15
+                            человек</font>.<br> Минимальный возраст,<br> от 18 лет.</p>
+                        <p><i class="fa-solid fa-moon"></i><br><font style="color:#ffb777;">5 ночей</font> в палатках.
+                        </p>
+                        <p><i class="fa-solid fa-tents"></i><br><font style="color:#ffb777;">2 ночи</font><br> (юрта или
+                            гостевой дом)</p>
+                        <p><i class="fa-solid fa-house-tsunami"></i><br><font style="color:#ffb777;">4 часа
+                            бани(сауны)</font>:<br>
+                            2 ч. женщины / <br>2 ч. мужчины</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="title_purposes_bottom">
+                <span class="fon_p_title_bottom"></span>
+                <h2>Наш маршрут и наполнение поездки единственное в своём роде</h2>
+            </div>
+        </div>
+        <!--Блок место встречи-->
+        <div class="meeting_place">
+            <div class="meeting_place_content">
+                <div class="meeting_place_left">
+                    <h2>Место встречи</h2>
+                    <p>11 июля 2023 года <br> с 11:00 до 12:00 часов.<br>г. Красноярск<br>Железноджорожный вокзал<br>ул.
+                        30 Июля, 1</p>
+                </div>
+                <div class="meeting_place_right">
+                    <span class="fon_map_meeting_place"></span>
+                    <div class="map_meeting_place">
+                        <div class="map_big">
+                            <script type="text/javascript" charset="utf-8" async
+                                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48ac5d6606be3ca827afd8a8fa6230daaf81b9e52792a1553da262677ac3bed5&amp;width=578&amp;height=445&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                        <div class="map_smoll">
+                            <script type="text/javascript" charset="utf-8" async
+                                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48ac5d6606be3ca827afd8a8fa6230daaf81b9e52792a1553da262677ac3bed5&amp;width=320&amp;height=324&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Блок особенности путешествия-->
+        <div class="features">
+            <div class="title_block">
+                <span class="fon_features_title"></span>
+                <h2>Особенности путешествия</h2>
+            </div>
+            <div class="features_text_right" id="features_text_right_img">
+                <span class="features_text_right_fon"></span>
+                <p><img src="{% static "main/img/travel/0339YmAuE7I.jpg" %}" alt="">
+                    С группой весь путь будет уважаемый тувинский шаман-целитель
+                    Нурсат Виктор Ховалыгович (Хашам). На протяжении всего пути
+                    мы будем погружаться в мировосприятие шаманов. Традиционный тувинский шаманизм.
+                    Будут и настоящие шаманские обряды (не инсцинировки), разговоры у костра.
+                    Возможен будет личный прием у шамана (вопросы,обучение и т.д) -
+                    оплата по сердцу после завершения путешествия.
+                </p>
+            </div>
+
+
+            <div class="features_text_left">
+                <span class="features_text_left_fon"></span>
+                <p>Мы познакомимся с сакральными местами и сблизимся с ними, если сложатся условия, увидим древние
+                    могильные курганы, каменные изваяния, петроглифы. Посетим местность, где занимаются
+                    "яководством". </p>
+            </div>
+
+            <div class="features_text_right">
+                <span class="features_text_right_fon"></span>
+                <p>Посетим мастер-класс по горловому пению и варгану.
+                    Можно будет приобрести варган.
+                </p>
+            </div>
+
+
+            <div class="features_text_left">
+                <span class="features_text_right_fon"></span>
+                <p>Маршрут может измениться. Это будет зависеть от погодных условий,
+                    пожеланий группы и непредвиденных условий.
+                </p>
+            </div>
+
+            <div class="features_text_right">
+                <span class="features_text_left_fon"></span>
+                <p>Проживание будет в палатках, на "Едине с Природой".
+                    Список личных вещей, которые нужно взять с собой, вышлю по запросу.
+                </p>
+            </div>
+
+            <div class="features_text_left">
+                <span class="features_text_right_fon"></span>
+                <p>Питание походное (на костре). На маршруте будут кафе, при желании можно сделать остановку (в
+                    стоимость не входят).
+                </p>
+            </div>
+
+            <div class="features_text_right">
+                <span class="features_text_left_fon"></span>
+                <p>Обратные билеты лучше приобретайте с запасом в 2-3 дня. </p>
+            </div>
+
+        </div>
+        <!--Блок основной маршрут-->
+        <div class="main_route">
+            <div class="title_main_route">
+                <span class="font_title_main_route"></span>
+                <h2>Основной маршрут</h2>
+            </div>
+
+            <div class="route_map">
+                <img src="{% static "main/img/travel/route_map2.png" %}" alt="">
+            </div>
+        </div>
+        <!--Блок галерея-->
+        <div class="gallery">
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/rzd4-9731770.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Красноярск ЖД вокзал</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/nEAlQT4AQe4_EXBpSIz.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Хакасия. Улуг-Хуртуях-Тас, "Камень матери" ("Великая Баба")</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/il7XoXHocIo_0VBqfW6.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Саяно-Шушенская ГЭС</p></span>
+
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/cTdE0_D4jtM_m96QDMy.jpg" %}" alt="">
+                <span><p> <i class="fa-solid fa-location-dot"></i>Долина Царей (курган Аржаан-2)</p></span>
+            </div>
+
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/QbASmKR3F1Y_fQDlt1x.jpg" %}" alt="">
+                <span><p> <i class="fa-solid fa-location-dot"></i> Развалины буддийского храма , постройки 16 - 17 веков </p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/Qpd0R3ci6ag_UBQCgzy.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i> Монгун-тайга </p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/zBhqj4hRod8_sbJ4QgZ.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i> Яки. Монгун-тайга</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/DSC_4000-27.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i> Хиндиктиг-Хол (тув.) озеро с пупом</p></span>
+            </div>
+
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/DSC_3893-17.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Моген - Бурен (река)</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/ig4b8_g4E9I.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Лечебное зеро Ак-Холь</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/9SWw9XPBv2I.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Ак - Баштыг ( гора,хребет Цаган-Шибэту)</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/Gx0zqu54gew_C0QT2bk.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Священный камень (Чурек-даш) Чалама в пойме р. Баян-Кол</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/FYjDZraWuNA_NLGTCYh.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Кундустуг Аржаан (источник)- Бобры</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/PGUIogMGVm4_ql79Oar.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Водный каньон "Дурген"</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/52bPRtTn2GU_QvQSloB.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Юрточный комплекс "Алдын-Булак"</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/YH37C9LTal4_2JD5FFv.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>"Тувинское Мёртвое море" Озеро Дус-Холь с целебной водой и лечебными грязями</p></span>
+            </div>
+
+            <div class="gallery_foto">
+                <img src="{% static "main/img/travel/galeri/hv8p-PWlDAg_xoMivR1.jpg" %}" alt="">
+                <span><p><i class="fa-solid fa-location-dot"></i>Вид с горы Догээ (г.Кызыл)</p></span>
+            </div>
+
+        </div>
+
+        <!--Заголовок после галереи-->
+        <div class="tiite_bottom_gellery">
+            <span class="fon_title_bottom_g"></span>
+            <h2>Стоимость и детали экстрим-путешествия<br>
+                узнавайте по <p><i class="fa-solid fa-mobile"></i>+7 (963) 297-96-87</p></h2>
+        </div>
+
+        <!--Блок обратная связь-->
+        <div class="feedback" id="feedback">
+            <div class="forma">
+                <span class="fon1_form"></span>
+                <span class="fon2_form"></span>
+                <form action="{% url "travel" %}" method="POST">
+                    {% csrf_token %}
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> <i class="fa-regular fa-square-check"></i> {{ message }} </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {{ forms.name_t }}<br>
+                    {{ forms.telefon_t}}<br>
+                    <button type="submit">Записаться</button>
+                </form>
+            </div>
+
+        </div>
+        <!--Блок подвал-->
+        {% include "main/elements/footer.html" %}
+    </div>
+
+{% endblock %}
+

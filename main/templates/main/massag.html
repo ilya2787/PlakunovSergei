@@ -1,0 +1,252 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Массаж
+{% endblock %}
+
+{% block content %}
+
+
+    <!--Блок меню-->
+    {% include "main/elements/Menu.html" %}
+
+    <!--Блок Шапки страницы-->
+    <div class="Header_massag">
+        <div class="Header_massag_inform">
+            <div class="Header_massag_inform_text">
+                <h3>Более 14 лет</h3>
+                <p>практики массажиста</p>
+                <h3>Более 10 000</h3>
+                <p>сделанных массажей</p>
+                <h3>2 открытых</h3>
+                <p>массажных кабинета</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Блок информации о себе-->
+    <div class="block_information_o_sebe">
+        <!--информации  Образование-->
+        <div class="block_information_o_sebe_Education">
+            <h2>Образование</h2>
+            <div class="line">
+                <hr>
+                <i class="fa-solid fa-square-check"></i>
+                <hr>
+            </div>
+            <p>2012 г. - Диплом специалиста АФК. Сертификаты по медецинскому массажу и ЛФК СГАФКС (г. Смоленск)</p>
+            <p>2016 г. - Кинезиотейпирование RockTape</p>
+            <p>2017 г. - Северный массаж</p>
+            <p>2019 г. - Бразильский массаж</p>
+            <p>2019 г. - Ортобиодинамика</p>
+        </div>
+        <!--информации  Достижение-->
+        <div class="block_information_o_sebe_Achievement">
+            <h2>Достижения</h2>
+            <div class="line">
+                <hr>
+                <i class="fa-solid fa-square-check"></i>
+                <hr>
+            </div>
+            <p>Участник многих Международных Чемпионатов по массажу</p>
+            <p>Судья на Чемпионатах по массажу</p>
+            <p>Обучаю начинающих массажистов<br>(4 года практики)</p>
+            <p>Организую семинары квалифицированных специалистов в области массажа из других регионов России</p>
+        </div>
+        <!--информации  Клиенты-->
+        <div class="block_information_o_sebe_Customers">
+            <h2>Клиенты</h2>
+            <div class="line">
+                <hr>
+                <i class="fa-solid fa-square-check"></i>
+                <hr>
+            </div>
+            <p>Филипп Киркоров</p>
+            <p>Сергей Жуков</p>
+            <p>Сергей Пенкин</p>
+            <p>Святослав Ещенко</p>
+            <p>Александр Тодчук</p>
+            <p>И многие другие интересные люди из России и зарубежья</p>
+        </div>
+        <img src="{% static "main/img/massag/foto4.png" %}" alt="" class="img_massag_big">
+        <img src="{% static "main/img/massag/foto2.png" %}" alt="" class="img_massag_small">
+
+
+    </div>
+
+    <!--Блок цитаты-->
+    <div class="quote">
+        <p>Массаж – то, чем я живу. Мое хобби, саморазвитие, творчество, отражение внутреннего мира.
+            <br>Я - счастливый человек, потому что нашел свою цель и себя в том, чем я занимаюсь.
+            <br>Иду «в ногу со временем» и отдаюсь полностью своему делу</p>
+        <h2>Всегда Ваш – Сергей Плакунов</h2>
+    </div>
+
+    <!--Блок услуги-->
+    <div class="services_massag">
+        <div class="title_block">
+            <h2>Услуги</h2>
+        </div>
+        <div class="services_massag_choice">
+            <div class="block_services_1">
+                <div id="services_massage" class="services_massage_a">
+                    <div class="services_massage_block"></div>
+                    <span>Массаж</span>
+                </div>
+
+                <div class="modal" id="modal-1">
+                    <div class="modal__content">
+                        <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <!-- Контент модального окна -->
+                        <div class="modal__content_block_massag">
+                            <h2>Виды массажных услуг</h2>
+                            {% for SM in SM %}
+                                <div class="modal__content_block_massag_information">
+                                    <div class="title"><h3>{{ SM.title }}</h3>
+                                        <p>Длительность: {{ SM.time|default_if_none:"--" }} мин</p></div>
+                                    <div class="description">{{ SM.content }}</div>
+                                    <p class="price">Цена: {{ SM.PoleOt|default_if_none:"" }} {{ SM.price }} <i class="fa-solid fa-ruble-sign"></i></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div id="services_spa_program" class="services_spa_program_a">
+                    <div class="services_spa_program_block"></div>
+                    <span>Спа-программа</span>
+                </div>
+
+
+                <div class="modal" id="modal-2">
+                    <div class="modal__content">
+                        <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <!-- Контент модального окна -->
+                        <div class="modal__content_block_spa_program">
+                            <h2>Виды спа-программ</h2>
+                            {% for Spa in Spa %}
+                                <div class="modal__content_block_spa_program_information">
+                                    <div class="title"><h3>{{ Spa.title }}</h3>
+                                        <p>Длительность: {{ Spa.time }} мин</p></div>
+                                    <div class="description">{{ Spa.content }}</div>
+                                    <p class="price">Цена: {{ Spa.price }} <i class="fa-solid fa-ruble-sign"></i></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="block_services_2">
+                <div id="services_taping" class="services_taping_a">
+                    <div class="services_taping_block"></div>
+                    <span>Тейпирование лица и тела</span>
+                </div>
+
+                <div class="modal" id="modal-3">
+                    <div class="modal__content">
+                        <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <!-- Контент модального окна -->
+                        <div class="modal__content_block_taping">
+                            <h2>Тейпирование лица и тела</h2>
+                            {% for Tap in Tap %}
+                                <div class="modal__content_block_taping_information">
+                                    <div class="title"><h3>{{ Tap.title }}</h3></div>
+                                    <div class="description"><p>{{ Tap.content }}</p>
+                                        <div class="content_img">
+                                            <img src="{{ Tap.image.url }}" alt="">
+                                            <img src="{{ Tap.image2.url }}" alt="">
+                                        </div>
+                                    </div>
+
+                                    <p class="price">Цена: {{ Tap.PoleOt|default_if_none:"" }} {{ Tap.price }} <i class="fa-solid fa-ruble-sign"></i></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div id="services_obuchine" class="services_obuchine_a">
+                    <div class="services_obuchine_block"></div>
+                    <span>Обучение</span>
+                </div>
+
+                <div class="modal" id="modal-4">
+                    <div class="modal__content">
+                        <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <!-- Контент модального окна -->
+                        <div class="modal__content_block_obuchine">
+                            <h2>Обучение</h2>
+                            {% for Obuch in Obuch %}
+                                <div class="modal__content_block_obuchine_information">
+                                    <div class="title"><h3>{{ Obuch.title }}</h3>
+                                        <p>{{ Obuch.time|default_if_none:"--" }}</p></div>
+                                    <div class="description">{{ Obuch.content }}</div>
+                                    <p class="price">Цена: {{ Obuch.price }} <i class="fa-solid fa-ruble-sign"></i></p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Блок подачи заявки-->
+    <div class="application_massag">
+        <p>Приобретайте отличное настроение<br> и приятные воспоминания</p>
+        <p>Оставьте заявку и получите
+            <fonts style="color:#ff6c00; font-size:50px;">-10%</fonts>
+            на подарочные сертификаты
+        </p>
+        <button id="application_b" class="application_button">Оставить заявку</button>
+        <ul class="messages_massag">
+            {% for message in messages %}
+                <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}><i
+                        class="fa-regular fa-square-check"></i> {{ message }} </li>
+            {% endfor %}
+        </ul>
+        <div class="modal" id="modal-5">
+            <div class="modal__content">
+                <button class="modal__close-button"><i class="fa-solid fa-xmark"></i></button>
+                <!-- Контент модального окна -->
+                <div class="modal__content_block_application">
+                    <h2>Форма для заявки</h2>
+
+                    <div class="forma_application">
+                        <form action="{% url "massag" %}" method="post">
+                            {% csrf_token %}
+                            {{ form.name }}
+                            {{ form.telefon }}
+                            {{ form.email }}
+                            <button type="submit">Отправить заявку</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Блок подвал-->
+    {% include "main/elements/footer.html" %}
+
+        <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+
+
+{% endblock %}

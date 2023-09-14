@@ -1,0 +1,163 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Обо мне
+{% endblock %}
+
+{% block content %}
+
+    <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
+
+    {% include "main/elements/Menu.html" %}
+    <!--Блок header-->
+    <div class="header_about_me">
+        <img src="{% static "main/img/about_me/header_about_me_small.jpg" %}" alt="">
+        <div class="text">
+            <h1>Добро пожаловать!</h1>
+            <p>Идея создания сайта сложилась спонтанно в марте 2023 года.<br>
+                Всему виной моя любовь к новым открытиям, путешествиям,
+                природе, науке, психологии, философии, духовности, долголетию.
+                <br>Давайте сначала познакомимся, немного расскажу о себе.
+                <br>Меня зовут</p>
+            <h2>Плакунов Сергей Геннадьевич</h2>
+        </div>
+    </div>
+    <!--Блок место рождения-->
+    <div class="Kaliningrad">
+        <div class="block_left">
+            <span class="fon_foto"></span>
+            <img src="{% static "main/img/about_me/kaliningrad.jpg" %}" alt="">
+        </div>
+        <div class="block_right">
+            <p>Я родился и вырос в <br>Калининградской области.<br>
+                В городе Иммануила Канта.</p>
+        </div>
+    </div>
+    <!--Блок семья-->
+    <div class="family">
+        <div class="block_left">
+            <p>Мне 42 года. Женат на самой лучшей, понимающей в мире женщине! Четверо прекрасных детей, один из них
+                приёмный. Недавно стал – дедом!
+            </p>
+        </div>
+        <div class="block_right">
+            <span class="fon_foto"></span>
+            <img src="{% static "main/img/about_me/fameli.jpg" %}" alt="">
+        </div>
+    </div>
+    <!--Блок массаж-->
+    <div class="massag">
+        <div class="block_left">
+            <span class="fon_foto"></span>
+            <img src="{% static "main/img/about_me/massagefoto.jpg" %}" alt="">
+        </div>
+        <div class="block_right">
+            <p>С 2005 года работаю массажистом. В 2012 году закончил СГАФКСиТ (г. Смоленск), специалист АФК, для лиц с
+                отклонением в физическом здоровье. Обучаю массажным техникам, являюсь лицензированным
+                преподавателем.</p>
+        </div>
+    </div>
+    <!--Блок путешествие-->
+    <div class="travel_about_me">
+        <div class="block_left">
+            <p>С 2019 по 2022 год посетил: Алтай, Абхазию, Бурятию, Байкал, Заполярье, Хакасию, Туву, Забайкалье.
+                <br><br>Путешествия изменили мой взгляд на жизнь, наполнили новыми смыслами.
+                <br><br>Получаю позитивный заряд от распознавания "символов" внешнего мира. Этот процесс я называю «Игры
+                знаков». 8 октября 2018 году начался более осознанный уровень в игре. Подробно напишу в <a
+                        href="{% url "Blog" %}">блоге</a>.
+            </p>
+        </div>
+        <div class="block_right">
+            <span class="fon_foto"></span>
+            <img src="{% static "main/img/about_me/travelfoto.jpg" %}" alt="">
+        </div>
+    </div>
+    <!--Блок вдохновители-->
+    <div class="inspirers">
+        <div class="title_inspirers">
+            <span class="fon_title_inspirers"></span>
+            <h2>Мои вдохновители и кумиры</h2>
+        </div>
+        <div class="list_inspirers">
+            <p><i class="fa-solid fa-circle-user"></i> Иммануил Кант<br>
+                <i class="fa-solid fa-circle-user"></i> Валентина Васильевна Петренко<br>
+                <i class="fa-solid fa-circle-user"></i> Илья Ильич Мечников<br>
+                <i class="fa-solid fa-circle-user"></i> Иван Петрович Павлов<br>
+                <i class="fa-solid fa-circle-user"></i> Порфирий Корнеевич Иванов<br>
+               <i class="fa-solid fa-circle-user"></i> Константин Павлович Бутейко<br>
+                <i class="fa-solid fa-circle-user"></i> Александр Александрович Микулин
+            </p>
+            <p> <i class="fa-solid fa-circle-user" id="i_mobile"></i> Александр Леонидович Чижевский <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Галина Сергеевна Шаталова <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Николай Михайлович Амосов <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Иван Антонович Ефремов <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Далай-лама XIV <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Грегори Дэвид Робертс <i class="fa-solid fa-circle-user" id="i_lep"></i><br>
+                <i class="fa-solid fa-circle-user" id="i_mobile"></i> Виктор Максимович Шепель <i class="fa-solid fa-circle-user" id="i_lep"></i></p>
+        </div>
+        <p>И ряд других замечательных учёных, естествоиспытателей, докторов, философов</p>
+    </div>
+    <!--Блок моя цель-->
+    <div class="my_goal">
+        <div class="title_my_goal">
+            <span class="fon_title_my_goal"></span>
+            <h2>Моя цель</h2>
+        </div>
+        <p>Cформировать у людей навык заботы о себе, необходимый для достижения здорового долголетия.</p>
+    </div>
+    <!--Блок моя прочность-->
+    <div class="my_strength">
+        <div class="title_my_strength">
+            <span class="fon_title_my_strength"></span>
+            <h2>Круглый год усиливаю свою прочность</h2>
+        </div>
+        <div class="content_inform">
+            <div class="block_1_strength">
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Голод 24 часа раз в неделю</p>
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Целебное питание</p>
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Закаливаюсь холодной водой и воздухом</p>
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Делаю гимнастику</p>
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Дыхательные упражнения</p>
+                <p><i class="fa-solid fa-circle-chevron-right"></i>Практикую медитацию</p>
+            </div>
+            <div class="block_2_strength">
+                <p>Мудры<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Увлекаюсь гороскопами<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Осознанными снами<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Изучаю философию и психологию<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Поглощаю книги<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Организую обучающие семинары по массажу<i class="fa-solid fa-circle-chevron-left"></i></p>
+                <p>Организую путешествия по нашей необъятной стране<i class="fa-solid fa-circle-chevron-left"></i></p>
+            </div>
+        </div>
+
+    </div>
+    <!--Блок с уважением-->
+    <div class="with_respect">
+        <p>Меня захватывает всестороннее развитие,
+            возможность применять полученные знания на практике.
+            <br>Приглашаю вас продолжить знакомство в разделе - <a href="{% url "Blog" %}">Блог</a></p>
+        <p>С уважением, Сергей Плакунов.</p>
+    </div>
+    <!--Блок подвал-->
+    {% include "main/elements/footer.html" %}
+
+
+{% endblock %}

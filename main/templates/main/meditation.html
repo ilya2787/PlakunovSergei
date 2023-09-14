@@ -1,0 +1,95 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Медитация
+{% endblock %}
+
+{% block content %}
+    <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
+
+
+    {% include "main/elements/Menu.html" %}
+
+    <!--Блок header-->
+    <div class="header_meditation">
+        <h2>Здравствуй, дорогой гость!</h2>
+        <div class="block_content">
+            <div class="block_left">
+                <h3>Медитация для меня это спутник мудрости.</h3>
+                <p>Возможно ли улучшить условия жизни?</p>
+                <p>Можно ли вырваться из круга негативных ситуаций?</p>
+                <h2>ДА!</h2>
+            </div>
+
+            <div class="block_right">
+
+                <div class="smoll_img">
+                    <img src="{% static "main/img/meditation/smoll_img.jpg" %}" alt="">
+                </div>
+                <img src="{% static "main/img/meditation/img_header.jpg" %}" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--Блок первый-->
+    <div class="block_1">
+        <div class="block_left">
+            <p>Негативным переживаниям</p>
+            <p>Стрессам</p>
+            <p>Тревожностям</p>
+            <p>Ощущениям неудовлетворенности жизнью</p>
+            <p>Эмоциональному истощению</p>
+            <p>Веренице дурных мыслей</p>
+            <p>Невозможности фокусироваться</p>
+        </div>
+        <span class="Leane"></span>
+        <div class="block_right">
+            <h2>В этом вопросе, надежный помощник - медитация, которая способна "взрастить" внутренний иммунитет к:</h2>
+        </div>
+    </div>
+
+    <!--Блок второй-->
+    <div class="block_2">
+        <div class="block_left">
+            <h2>Ежедневная медитация помогает:</h2>
+        </div>
+        <span class="leane"></span>
+        <div class="block_right">
+            <p>Управлять своими эмоциями</p>
+            <p>Решить внутренние конфликты</p>
+            <p>Ценить момент "здесь и сейчас"</p>
+            <p>Преодолевать сложности в отношениях</p>
+            <p>Развивать умственную дисциплину, мышление, осознанность</p>
+            <p>"Уйти" от вредных привычек</p>
+            <p>Улучшить качество ощущений жизни</p>
+        </div>
+    </div>
+
+    <div class="meditation_h1">
+        <h1>Более подробную информацию можно будет найти в разделе - <a href="{% url "Blog" %}">Блог</a>.</h1>
+    </div>
+
+
+    <!--Блок подвал-->
+    {% include "main/elements/footer.html" %}
+
+{% endblock %}

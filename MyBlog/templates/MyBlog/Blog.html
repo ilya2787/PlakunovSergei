@@ -1,0 +1,75 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Мой блог
+{% endblock %}
+
+{% block content %}
+
+    <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
+
+    {% include "main/elements/Menu.html" %}
+    {% block content_Blog %}
+    <!--Заголовок страницы блога-->
+    <div class="header_blog">
+        <h1>Здравствуй, дорогой гость!</h1>
+        <div class="p_inform">
+            <p>Любишь путешествовать? Добро пожаловать в мою команду единомышленников!</p>
+            <p>Блог - это моё пространство. Истории из жизни, поиск ответов на вопросы, путешествия, практики
+                физического и духовного здоровья.</p>
+            <p>Моя главная жизненная установка - человек хранитель жизни на Земле.</p>
+            <p>У каждого из нас есть мечты, цели, желания, а вам хватает энергии для достижения желаемого? А где же
+                черпать
+                эту энергию? Как раскрыть наши ресурсы?</p>
+            <p>Жизнь - это исследовательская лаборатория. Путешествия ее инструмент.</p>
+            <p>Воссоединение с природой - путь к раскрытию и приумножению энергии жизни.</p>
+            <p>Это мой вектор движения, присоединяйтесь! Я всегда открыт для вас.</p>
+        </div>
+
+        <h3>С уважением, Сергей Плакунов.</h3>
+    </div>
+    <!--Вывод постов-->
+    <div class="posts">
+            <div class="a_topic">
+                <h1>Темы на выбор</h1>
+                <a href="{% url "Blog" %}">Главная</a>
+                {% for topic in topics %}
+                    <a href="{% url "My_topic" topic.id %}">{{ topic.name }}</a>
+                {% endfor %}
+            </div>
+            {% for Blog in MyBlog %}
+                <div class="posts_info">
+                    <img src="{{ Blog.image.url }}" alt="">
+                    <div class="posts_info_text">
+                        <a href="{% url "content_blog" Blog.id  %}"><h2>{{ Blog.title }}</h2></a>
+                        <div class="data_publoshed"><i class="fa-solid fa-calendar-days"></i>{{ Blog.published }}
+                            Тема: {{ Blog.topic }}</div>
+                        <p>{{ Blog.content }}</p>
+                        <a href="{% url "content_blog" Blog.id  %}">Продолжение...</a>
+                    </div>
+                </div>
+            {% endfor %}
+
+            </div>
+        {% endblock %}
+    <!--Блок подвал-->
+    {% include "main/elements/footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% load sass_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="Здравствуйте 🤝 Добро пожаловать на сайт! "/>
+    <meta property="og:image" content="{% static "main/img/Galagrama.png" %}"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=on">
+
+    <link href="{% sass_src 'main/css/style.scss' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% sass_src 'MyBlog/css/Style_Blog.scss' %}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{% static "main/css/cssReset.css" %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="{% static "main/js/Burger.js" %}"></script>
+    <script type="text/javascript" src="{% static "main/js/Scroll.js" %}"></script>
+    <script type="text/javascript" src="{% static "main/js/dop_function.js" %}"></script>
+    <script type="text/javascript" src="{% static "MyBlog/js/img_simp.js" %}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=IBM+Plex+Sans:wght@200;300&family=Lobster&family=Roboto+Mono:wght@100;200&family=Roboto+Slab&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static "main/img/logo_gorizont.png" %}"/>
+
+</head>
+<body>
+<div id='preloader'>
+    <img src="https://usagif.com/wp-content/uploads/loading-51.gif" alt="preloader">
+</div>
+
+{% block content %}
+    <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
+
+
+{% endblock %}
+
+
+<script type="text/javascript" src="{% static "main/js/Model.js" %}"></script>
+
+</body>
+</html>

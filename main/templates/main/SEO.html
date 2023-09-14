@@ -1,0 +1,109 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Система естественного оздоровления (СЕО)
+{% endblock %}
+
+{% block content %}
+
+    <!— Yandex.Metrika counter —>
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();
+for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(93642517, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/93642517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!— /Yandex.Metrika counter —>
+
+
+
+
+    {% include "main/elements/Menu.html" %}
+    <!--Шапка сео-->
+    <div class="header_seo">
+        <div class="block_content">
+            <div class="block_img_planet"><img src="{% static "main/img/SEO/planet2.png" %}" alt=""></div>
+            <div class="block_text">
+                <p>Мы все живём на планете Земля и не секрет, что воздух, воду, все полезные ископаемые создаёт Земля.
+                    Она живая! Если мы хотим сберечь планету для себя и потомков - нужно менять своё мышление.<br><br>
+                    Сохраняя планету, мы сохраняем себя.<br><br>
+                    Отдаляясь от природы, ведя неправильный образ жизни - получаем болезни.<br><br>Человек понимает, но всё
+                    равно не может преодолеть "вредные" здоровью желания.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Второй блок информации сео-->
+    <div class="block1_seo">
+        <div class="block_content">
+            <div class="block_left">
+                <p>Себя я отношу к сторонникам создания условий, необходимых нашему организму для эффективной
+                    саморегуляции
+                    организма.</p>
+            </div>
+            <div class="block_right">
+                <img src="{% static "main/img/SEO/BcNcPaqp2b4.jpg" %}" alt="">
+            </div>
+        </div>
+        <div class="block_title_bottom"><p>Ядро моего дня формирует СЕО - система естественного оздоровления,
+            разработанная Галиной Сергеевной Шаталовой.</p></div>
+    </div>
+
+    <!--Третий блок информации сео-->
+    <div class="block2_seo">
+        <div class="block_content">
+            <div class="line1">
+                <p>Целебное питание</p>
+                <p>Дыхание</p>
+                <p>Закаливание</p>
+            </div>
+            <p class="center_p">Система состоит из пяти НЕРАЗРЫВНО <br>связанных между собой элементов</p>
+            <div class="line2">
+                <p>Движение</p>
+                <p>Постоянно позитивный настрой</p>
+            </div>
+            <div class="block2_title_bottom"><p>Система помогает понять законы природы, войти в согласие с ними.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Четвертый блок информации сео-->
+    <div class="block3_seo">
+        <h3>Ступени к достижению</h3>
+        <div class="content_block">
+            <p>Дисциплина мышления</p>
+            <p>Строгая организация режима дня</p>
+        </div>
+        <div class="block_title_bottom"><p>Давайте пройдем этот путь вместе?!</p></div>
+    </div>
+
+    <!--пятый блок информации сео-->
+    <div class="block4_seo">
+        <div class="block_content">
+            <div class="block_left">
+                <img src="{% static "main/img/SEO/_cvQ3Al7dnY.jpg" %}" alt="">
+            </div>
+            <div class="block_right">
+                <p>До встречи на олимпе здоровья!</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Приглошение в блог-->
+    <div class="block_v_blog_seo">
+    <div class="title_blog_seo"><p>Развернуто с представленной информацией познакомлю в - <a href="{% url "Blog" %}">Блоге</a></p></div>
+    </div>
+
+    <!--Блок подвал-->
+    {% include "main/elements/footer.html" %}
+
+{% endblock %}

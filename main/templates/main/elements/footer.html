@@ -1,0 +1,36 @@
+{% load static %}
+
+<div class="footer">
+    <div class="contacts">
+        <div class="sochial">
+            <h2>Контакты</h2>
+            <a href=""><i class="fa-solid fa-phone"></i>+ 7 (963) 297-96-87</a>
+            <a href="https://t.me/+V55xjgX65stkZjEy" title="Telegram" target="_blank"><i class="fa-brands fa-telegram"></i>Telegram</a>
+            <a href="https://api.whatsapp.com/send?phone=79632979687" title="WhatsApp" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+            <a href="https://vk.com/s.plakunov" title="Вконтакте" target="_blank"><i class="fa-brands fa-vk"></i>Вконтакте</a>
+            <a href="https://www.youtube.com/channel/UCU1oMMpmnVoFO6VF7gHVNaw?view_as=subscriber" title="YouTube" target="_blank"><i class="fa-brands fa-square-youtube"></i>YouTube</a>
+
+        </div>
+        <img src="{% static "main/img/logo_gorizont.png" %}" alt="">
+        <div class="footer_menu">
+            <h2>Меню</h2>
+            <ul>
+                <li><a href="{% url "home" %}">Главная</a></li>
+                <li><a href="{% url "meditation" %}">Медитация</a></li>
+                <li><a href="{% url "seo" %}">СЕО</a></li>
+                <li><a href="{% url "travel" %}">Путешествия</a></li>
+                <li><a href="{% url "about_me" %}">Обо мне</a></li>
+                <li><a href="{% url "Blog" %}">Блог</a></li>
+                <li><a href="">Массаж</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="Copyright">
+        <p><i class="fa-regular fa-copyright"></i> Copyright 2023 | Powered by Sergei Plakunov</p>
+        <p><a href="https://t.me/ilyaNepryakhin" target="_blank">Сайт разработал | @ilyaNepryakhin</a></p>
+        <p>Вся представленная на сайте информация носит информативный характер и ни при каких условиях не является
+            публичной офертой</p>
+    </div>
+
+</div>
+
